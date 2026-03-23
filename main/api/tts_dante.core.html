@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tts_dante.core &mdash; tts-dante 0.3.3.dev0+g1562121e3.d20260323 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/bugfix.css?v=aa86f000" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=59c95fb4"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="tts_dante.derivers" href="tts_dante.derivers.html" />
+    <link rel="prev" title="tts_dante" href="tts_dante.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            tts-dante
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tts_dante.html">tts_dante</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tts_dante.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">tts_dante.core</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tts_dante.derivers.html">tts_dante.derivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tts_dante.interpolators.html">tts_dante.interpolators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">tts-dante</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tts_dante.html">tts_dante</a></li>
+      <li class="breadcrumb-item active">tts_dante.core</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-tts_dante.core">
+<span id="tts-dante-core"></span><h1>tts_dante.core<a class="headerlink" href="#module-tts_dante.core" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-tts_dante.core.dante">
+<span id="tts-dante-core-dante"></span><h3>tts_dante.core.dante<a class="headerlink" href="#module-tts_dante.core.dante" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_dante.core.dante.Dante">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_dante.core.dante.</span></span><span class="sig-name descname"><span class="pre">Dante</span></span><a class="headerlink" href="#tts_dante.core.dante.Dante" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">InvulnerableDataManager</span></code></p>
+<p>The central management class for the Dante data derivation framework.</p>
+<p>Inherits from InvulnerableDataManager to provide robust data loading and management.
+Unlike Dexter, which focuses on dispositioning existing data, Dante is designed
+to orchestrate the derivation of new data products via a series of registered
+‘Derivers’.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>_derivers (list): A list of initialized deriver instances managed by this class.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_dante.core.dante.Dante.derive_all">
+<span class="sig-name descname"><span class="pre">derive_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.dante.Dante.derive_all" title="Link to this definition"></a></dt>
+<dd><p>Executes the derivation logic for all registered derivers.</p>
+<p>Iterates through the list of initialized derivers and calls their
+<cite>derive</cite> method to generate new data products.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_dante.core.dante.Dante.init_deriver">
+<span class="sig-name descname"><span class="pre">init_deriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deriver_cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.dante.Dante.init_deriver" title="Link to this definition"></a></dt>
+<dd><p>Instantiates and registers a new deriver.</p>
+<p>This method safely attempts to create an instance of the provided
+deriver class using <cite>exec_invulnerable</cite>. If successful, the
+instance is added to the internal list of active derivers.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>deriver_cls (class): The class of the deriver to initialize.</dt><dd><p>Must accept the Dante instance as an argument.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tts_dante.core.derive">
+<span id="tts-dante-core-derive"></span><h3>tts_dante.core.derive<a class="headerlink" href="#module-tts_dante.core.derive" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_dante.core.derive.Deriver">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_dante.core.derive.</span></span><span class="sig-name descname"><span class="pre">Deriver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dante</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.derive.Deriver" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for implementing data derivation logic.</p>
+<p>Subclasses must define a <cite>NAME</cite> attribute and implement derivation methods
+decorated with <cite>&#64;deriver_method</cite>. The <cite>derive</cite> method automatically discovers
+and executes these methods to produce new data products.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>DERIVER_NAME (str or None): Placeholder for the specific deriver’s name.</dt><dd><p>Subclasses should override <cite>NAME</cite> instead.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tts_dante.core.derive.Deriver.DERIVER_NAME">
+<span class="sig-name descname"><span class="pre">DERIVER_NAME</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#tts_dante.core.derive.Deriver.DERIVER_NAME" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_dante.core.derive.Deriver.derive">
+<span class="sig-name descname"><span class="pre">derive</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.derive.Deriver.derive" title="Link to this definition"></a></dt>
+<dd><p>Executes all approved derivation methods within this class.</p>
+<p>Iterates over methods decorated with <cite>&#64;deriver_method</cite>, executes them,
+and registers any valid resulting data products with the Dante manager.
+Also prevents duplicate execution if data for this deriver already exists.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tts_dante.core.derive.deriver_method">
+<span class="sig-prename descclassname"><span class="pre">tts_dante.core.derive.</span></span><span class="sig-name descname"><span class="pre">deriver_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">required</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.derive.deriver_method" title="Link to this definition"></a></dt>
+<dd><p>Decorator for defining a data derivation method.</p>
+<p>This is a specialized version of <cite>invulnerable_method</cite> specifically for
+deriver functions.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>required (list[str]): Names of required data items.
+optional (list[str], optional): Names of optional data items.
+batch (str, optional): Name of a specific data batch to use.
+approved (bool, optional): Whether the derivation is approved. Defaults to True.</p>
+</dd>
+<dt>Returns:</dt><dd><p>function: The decorated derivation method.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tts_dante.core.derive.invulnerable_method">
+<span class="sig-prename descclassname"><span class="pre">tts_dante.core.derive.</span></span><span class="sig-name descname"><span class="pre">invulnerable_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">required</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'invulnerable</span> <span class="pre">method'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_dante.core.derive.invulnerable_method" title="Link to this definition"></a></dt>
+<dd><p>Decorator factory to create a robust data processing method wrapper.</p>
+<p>Ensures that required data is available before executing the decorated function
+and wraps execution in an <cite>invulnerable</cite> block to prevent crashes from exceptions.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>required (list[str]): Names of data items required for the method.
+optional (list[str], optional): Names of optional data items.
+batch (str, optional): Name of a specific data batch to use.
+approved (bool, optional): Whether the method is approved for execution. Defaults to True.
+method_name (str, optional): A descriptive name for logging purposes.</p>
+</dd>
+<dt>Returns:</dt><dd><p>function: The decorated function wrapper.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tts_dante.html" class="btn btn-neutral float-left" title="tts_dante" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tts_dante.derivers.html" class="btn btn-neutral float-right" title="tts_dante.derivers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026 JPL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

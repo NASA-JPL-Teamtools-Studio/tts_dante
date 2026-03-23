@@ -1,0 +1,5 @@
+pytest
+scipy
+tts-data-utils<1.0.0,>=0.2.0
+tts-papertrail<1.0.0,>=0.1.1
+tts-utilities<1.0.0,>=0.2.0
