@@ -1,7 +1,7 @@
 # Dante
 Derivation Assistant for Novel Telemetry Expression
 
-![Project logo](https://github.com/NASA-JPL-Teamtools-Studio/teamtools-documentation/blob/main/docs/images/tts_image_artifacts/dante.png)
+![Project logo](https://github.com/NASA-JPL-Teamtools-Studio/teamtools_documentation/blob/main/docs/images/tts_image_artifacts/dante.png)
 
 ## About Teamtools Studio
 
