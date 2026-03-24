@@ -17,16 +17,15 @@ For more infomation on how to contribute, and how these libraries form a complet
 
 ### Overview
 
-Dante is the TTS answer to when a system that produces data doesn't produce the data that you want. The most typical need for Dante at JPL
-is creating ground derived channels if those are not yet available in your project's GDS for any reason.
+Dante is the TTS answer for when a system that produces data doesn't produce the data that you want. 
 
-For those outside of JPL, a primer... AMPCS is the software used to connect with the DSN, decomm telemetry, and turn it into time
-series data. AMPCS has a notion of "ground derived channels" (think dn to eu conversion as a simple example). AMPCS can combine
-data from the spacecraft to make new channels that the spacecraft has no knowledge of, and Dante serves a very similar funciton.
+The most typical need for Dante at JPL is creating ground derived channels if those are not yet available in your project's GDS for any reason.
 
-This is not meant to be a replacement for AMPCS Ground Derived Channels, but as an admission that the AMPCS GDC infrastructure 
-has its pros as well as cons. Pseudo-channels in this library will NEVER flow back into legacy CHILL databases, but may be 
-put into tools like EAS's State Data Store for query later. 
+For those outside of JPL, a primer... AMPCS is the software used to connect with the DSN, decommute telemetry, and turn it into time series data. AMPCS has a notion of "ground derived channels" (think dn to eu conversion as a simple example). AMPCS can combine data from the spacecraft to make new channels that the spacecraft has no knowledge of, and Dante serves a very similar funciton.
+
+A common cartoon example is a spacecraft that produces current data and voltage data. Dante could be used to create a power channel because P=I\*V.
+
+This is not meant to be a replacement for AMPCS Ground Derived Channels, but as an admission that the AMPCS GDC infrastructure  has its pros as well as cons. Pseudo-channels in this library will NEVER flow back into legacy CHILL databases, but may be  put into tools like EAS's State Data Store for query later. 
 
 Reasons you'd want to have Dante:
 
@@ -43,11 +42,5 @@ Reasons you'd want to use AMPCS instead:
 
 ### Projects Currently Supported
 
-* NISAR Prototype
-
-## Architecture
-
-### TTS dependencies
-
-* TTS Utilities
-* TTS Data Utils
+* NISAR (Prototype)
+* Sample Retrieval Lander (Prototype)
