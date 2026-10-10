@@ -65,7 +65,7 @@ class StepInterpolator(Interpolator):
         """
         idx = bisect.bisect_right(times, target_time) - 1
         if idx < 0: return None
-        if timeout and (target_time - times[idx] > timeout): return None
+        if timeout is not None and (target_time - times[idx] > timeout): return None
         return values[idx]
 
 class SuperpositionInterpolator(Interpolator):
@@ -134,7 +134,7 @@ class LinearInterpolator(Interpolator):
         if len(times) < 2: 
             return values[0] if (values and times[0] == target_time) else None
         idx = bisect.bisect_right(times, target_time) - 1
-        if timeout and idx >= 0 and (target_time - times[idx] > timeout):
+        if timeout is not None and idx >= 0 and (target_time - times[idx] > timeout):
             return None
         f = interp1d(times, values, kind='linear', fill_value="extrapolate")
         return float(f(target_time))
@@ -153,7 +153,7 @@ class CubicInterpolator(Interpolator):
         if len(times) < 4: 
             return LinearInterpolator().interpolate(target_time, times, values, timeout)
         idx = bisect.bisect_right(times, target_time) - 1
-        if timeout and idx >= 0 and (target_time - times[idx] > timeout):
+        if timeout is not None and idx >= 0 and (target_time - times[idx] > timeout):
             return None
         f = interp1d(times, values, kind='cubic', fill_value="extrapolate")
         return float(f(target_time))
